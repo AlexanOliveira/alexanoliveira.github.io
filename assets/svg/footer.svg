@@ -1,0 +1,40 @@
+<svg viewBox="0 -2 1440 64" xmlns="http://www.w3.org/2000/svg">
+   <defs>
+      <linearGradient id="gradient" x1="100%" y1="0%" x2="0%" y2="0%">
+         <stop offset="0.125" stop-color="#ce6cdb"></stop>
+         <stop offset="0.25" stop-color="#309cfa"></stop>
+         <stop offset="0.375" stop-color="#98db1d"></stop>
+         <stop offset="0.5" stop-color="#fff238"></stop>
+
+         <stop offset="0.625" stop-color="#fff238"></stop>
+         <stop offset="0.75" stop-color="#98db1d"></stop>
+         <stop offset="0.875" stop-color="#309cfa"></stop>
+         <stop offset="1" stop-color="#ce6cdb"></stop>
+      </linearGradient>
+   </defs>
+
+   <g id="footer">
+      <pattern id="pattern" x="0" y="0" width="100%" height="100%" patternUnits="userSpaceOnUse">
+         <rect x="100%" y="0" width="100%" height="100%" fill="url(#gradient)">
+            <animate attributeType="XML" attributeName="x" from="0%" to="100%" dur="3s" repeatCount="indefinite"></animate>
+         </rect>
+         <rect x="100%" y="0" width="100%" height="100%" fill="url(#gradient)">
+            <animate attributeType="XML" attributeName="x" from="-100%" to="0%" dur="3s" repeatCount="indefinite"></animate>
+         </rect>
+      </pattern>
+
+      <path d="M -1.141 13.257 C -0.95 13.255 -0.759 13.253 -0.568 13.251 L -1.141 13.257 Z M 502.489 40.586 C 652.017 68.168 806.559 57.32 966.111 36.215 C 1119.362 15.942 1262.979 -16.337 1443.859 28.563 L 1444.423 21.79 C 1263.543 -23.11 1119.926 9.169 966.675 29.442 C 807.123 50.546 652.581 61.395 503.053 33.812 C 339.854 3.707 170.436 4.664 -0.577 6.483 L -0.568 13.251 C 170.251 11.436 339.472 10.513 502.489 40.586 Z" id="Fill-1" fill="url(#pattern)" fill-rule="nonzero"></path>
+
+      <defs>
+         <linearGradient id="myGradient" gradientTransform="rotate(0)">
+            <stop offset="0.05" stop-color="#5D6A77"></stop>
+            <stop offset="0.25" stop-color="#586470"></stop>
+            <stop offset="0.5" stop-color="#535E6A"></stop>
+            <stop offset="0.75" stop-color="#4F5A65"></stop>
+            <stop offset="1" stop-color="#4C5761"></stop>
+         </linearGradient>
+      </defs>
+
+      <path fill="url(#myGradient)" d="M -1.141 9.489 C 169.82 7.669 339.187 6.71 502.337 36.836 C 651.82 64.438 806.315 53.582 965.819 32.463 C 1119.023 12.176 1262.597 -20.125 1443.422 24.806 L 1443.422 61.103 L -1.109 61.103 L -1.141 9.489 Z"></path>
+   </g>
+</svg>

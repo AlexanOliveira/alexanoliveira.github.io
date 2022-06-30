@@ -1,0 +1,497 @@
+body nav {
+  position: unset;
+}
+body nav .topnav-user {
+  min-width: 15vw;
+}
+body nav .topnav-user .btn-user {
+  border: none;
+}
+body nav .topnav-user .btn-user #notification {
+  height: 25px;
+  margin-right: 25px;
+}
+body nav .topnav-user .btn-user .user-pict {
+  width: auto;
+  height: 40px;
+  overflow: hidden;
+  border: 2px solid rgba(214,214,214,0.451);
+  border-radius: 50%;
+}
+body nav .topnav-user .btn-user .user-pict img {
+  width: auto;
+  height: 100%;
+}
+.big-container {
+  display: flex;
+}
+.body-container.expand {
+  padding: 0.5rem;
+}
+.body-container {
+  flex: 1 1 0%;
+  margin: 0 auto !important;
+  overflow: hidden;
+  min-width: 720px;
+  text-align: unset !important;
+}
+.body-container .section-video {
+  background: var(--background-container);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+}
+.body-container .section-video .video-header {
+  display: flex;
+  margin: 0.2rem 0.2rem 0.6rem;
+}
+.body-container .section-video .video-header .video-title {
+  flex: 1 1 0%;
+  font-size: 1.5rem;
+  font-family: 'Montserrat';
+  font-weight: bolder;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.body-container .section-video .video-header .options-div {
+  display: flex;
+  justify-content: right;
+}
+.body-container .section-video .video-header .options-div .expand-area,
+.body-container .section-video .video-header .options-div .show-module {
+  margin: 0 6px;
+  color: #0097fa;
+  border: 2px solid #0097fa;
+  border-radius: 50px;
+  height: 25px;
+  padding: 0 1rem;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+.body-container .section-video .video-header .options-div .expand-area:hover,
+.body-container .section-video .video-header .options-div .show-module:hover {
+  color: #fff !important;
+  background: #0097fa;
+}
+.body-container .section-video .video-header .options-div .show-module.active {
+  color: #0097fa;
+  border-color: #0097fa;
+  pointer-events: auto;
+}
+.body-container .section-video .video-header .options-div .show-module {
+  color: transparent;
+  border: 2px solid transparent;
+  pointer-events: none;
+}
+.body-container .section-video .video-area {
+  margin: auto;
+  width: 100%;
+}
+.body-container .section-video .video-area .responsivity {
+  position: relative;
+  padding: 0px 0px 56.25%;
+}
+.body-container .section-video .video-area .responsivity .play-video {
+  position: absolute;
+  height: 100%;
+  border-radius: 10px;
+}
+.body-container .section-video .video-info {
+  display: flex;
+  padding-top: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.body-container .section-video .video-info div {
+  font-size: 0.9rem;
+  margin: 0 25px;
+  height: 1.3rem;
+  cursor: pointer;
+}
+.body-container .section-video .video-info div:hover {
+  color: #0097fa;
+}
+.body-container .section-video .video-info div span {
+  margin: 0 8px;
+}
+.body-container .section-video .video-details.expand {
+  height: 270px;
+}
+.body-container .section-video .video-details {
+  height: 0px;
+  overflow: hidden;
+}
+.body-container .section-video .video-details .video-file {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.body-container .section-video .video-details .video-file .header {
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 10px;
+  padding: 0 0.7rem;
+}
+.body-container .section-video .video-details .video-file .header .name {
+  width: 75%;
+}
+.body-container .section-video .video-details .video-file .header .size {
+  width: 15%;
+  text-align: center;
+}
+.body-container .section-video .video-details .video-file .header .download {
+  width: 10%;
+  text-align: center;
+}
+.body-container .section-video .video-details .video-file .file {
+  margin: 0.3rem 0;
+  padding: 0.7rem;
+  background: #fff;
+  border: 1px solid #f1f8f1;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #48484f;
+  border-collapse: collapse;
+  display: flex;
+}
+.body-container .section-video .video-details .video-file .file .name {
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+.body-container .section-video .video-details .video-file .file .size {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body-container .section-video .video-details .video-file .file .download {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+}
+.body-container .section-video .video-details .video-obs {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.body-container .section-video .video-details .video-obs .observations {
+  margin: 0.5rem 0;
+  padding: 0.7rem;
+  background: #fff;
+  border: 1px solid #f1f8f1;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #48484f;
+}
+.body-container .section-video .video-details .ver-mais {
+  position: absolute;
+  bottom: 1rem;
+}
+.body-container .notepad {
+  padding: 1rem 2rem;
+}
+.body-container .notepad #area-text::placeholder {
+  color: #a1a2a4;
+}
+.body-container .notepad #area-text {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.7rem;
+  max-height: 150px;
+  resize: none;
+  border: 1px solid #f1f8f1;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  color: #48484f;
+  user-select: text;
+}
+.body-container .notepad #area-text:focus {
+  outline: none;
+  border: 1px solid #48e3cf;
+}
+.body-container .section-questions {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+.body-container .section-questions .make-question {
+  margin: 0.5rem 0;
+}
+.body-container .section-questions .make-question .edit-html-question {
+  display: flex;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.body-container .section-questions .make-question .edit-html-question div {
+  padding-right: 0.8rem;
+}
+.body-container .section-questions .make-question .input-question-container {
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+  outline: none;
+  background: #fff;
+  white-space: nowrap;
+}
+.body-container .section-questions .make-question .input-question-container .input-question {
+  border: 1px solid #f1f8f1;
+  border-radius: 5px;
+  min-height: 150px;
+  max-height: 85vh;
+  padding: 0.7rem;
+  overflow-x: scroll;
+  font-size: 14px;
+  font-weight: lighter;
+  color: #48484f;
+  user-select: text;
+  outline: none;
+  tab-size: 4;
+}
+.body-container .section-questions .make-question .input-question-container .input-question:focus {
+  border: 1px solid #48e3cf;
+}
+.body-container .section-questions .make-question .input-question-container .input-question:empty + button {
+  pointer-events: none;
+  background: #d3d3d3;
+}
+.body-container .section-questions .make-question .input-question-container .input-question:empty:not(:focus):before {
+  content: attr(placeholder);
+  color: #a1a2a4;
+}
+.body-container .section-questions .make-question .input-question-container .input-question img {
+  max-width: calc(100% - 2rem);
+  margin: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 1px 1px rgba(0,0,0,0.16);
+  border: 0.7px solid #d7d7d7;
+  border-radius: 2px;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container {
+  user-select: text;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div {
+  background: #151f2c;
+  color: #d3d3d3;
+  margin: 0.5rem 0.5rem 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div .code-bar {
+  height: 25px;
+  background: #333435;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: default;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div .code-bar .btn-close,
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div .code-bar .btn-empty {
+  height: 13px;
+  width: 13px;
+  margin-left: 6px;
+  border-radius: 50%;
+  background: #555857;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div .code-bar .btn-close {
+  margin-left: 8px !important;
+  background: #fe5e56;
+  cursor: pointer;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div .code-bar .btn-close:hover {
+  background: #fb1f13;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div:hover .copy-btn {
+  opacity: 1;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div .copy-btn {
+  background: rgba(75,77,78,0.45);
+  color: rgba(255,255,255,0.3);
+  font-family: 'TCCC-UnityText Regular';
+  font-size: 10px;
+  font-weight: bolder;
+  position: absolute;
+  right: 0;
+  padding: 6px 7px 5px;
+  margin: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  --opct: 0;
+  --dsp: none;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div .copy-btn:hover {
+  background: #4b4d4e;
+  color: #fff;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div .copy-btn::before {
+  content: 'Copiado';
+  background: #4b4d4e;
+  color: #fff;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  display: var(--dsp);
+  opacity: var(--opct);
+  padding: 10.3px 8px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: -70px;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div pre {
+  min-height: 120px;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div pre code {
+  padding: 1.2rem 1.5rem;
+  user-select: text;
+  overflow-x: scroll;
+  min-height: 150px;
+  max-height: 60vh;
+  max-width: 1400px;
+  display: block;
+  outline: none;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div pre code::selection {
+  color: #fdedf5;
+  background: #7b4c67;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div pre code *::selection {
+  color: #fdedf5;
+  background: #7b4c67;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div pre code .key-word {
+  color: #ee78b9;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div pre code .normal-string {
+  color: #7ad7f0;
+}
+.body-container .section-questions .make-question .input-question-container .input-question .code-container .code-div pre code .comment {
+  color: #36a132;
+}
+.body-container .section-questions .make-question .btn-comment {
+  color: #fff;
+  font-family: 'TCCC-UnityText Regular';
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  padding: 10px 16px;
+  background: #0097fa;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  margin-top: 10px;
+  float: right;
+}
+.body-container .section-questions .make-question .btn-comment:active {
+  background: #065fd4;
+}
+.body-container .ver-mais {
+  font-weight: 500;
+  font-size: 13px;
+  color: #0097fa;
+  margin-top: -18px;
+  width: 80px;
+  cursor: pointer;
+}
+.modal-lessons.expand {
+  top: 0;
+  position: absolute;
+  width: 100vw;
+  background: rgba(0,0,0,0.25);
+}
+.modal-lessons {
+  user-select: none;
+  height: 115vh;
+}
+.modal-lessons .lessons-container.modal {
+  position: absolute;
+  background: linear-gradient(180deg, rgba(241,243,244,0.8) 5%, rgba(238,240,241,0.8) 25%, rgba(236,238,240,0.8) 50%, rgba(235,237,239,0.8) 75%, rgba(234,236,238,0.8) 100%);
+}
+.modal-lessons .lessons-container.hide {
+  max-width: 0;
+  border-color: transparent;
+}
+.modal-lessons .lessons-container {
+  right: 0;
+  top: 78px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 1px 1px rgba(0,0,0,0.1);
+  background: var(--background-container);
+  height: 115vh;
+  max-width: 375px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.modal-lessons .lessons-container::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.modal-lessons .lessons-container .module.expand .lessons-div {
+  max-height: auto;
+}
+.modal-lessons .lessons-container .module {
+  border-bottom: 2px dashed #11d6a3;
+  padding: 0.5rem 0;
+  margin: 0 1.5rem;
+  font-family: 'TCCC-UnityText Regular';
+  font-size: 0.9rem;
+}
+.modal-lessons .lessons-container .module .module-div {
+  background: rgba(115,217,134,0.7);
+  text-overflow: ellipsis;
+  padding: 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.modal-lessons .lessons-container .module .module-div:hover {
+  background: #73d986;
+}
+.modal-lessons .lessons-container .module .lessons-div {
+  overflow: hidden;
+  max-width: 320px;
+  max-height: 0px;
+  margin-top: 15px;
+}
+.modal-lessons .lessons-container .module .lessons-div .lesson {
+  margin: 0.2rem 0.8rem 0;
+  padding: 0.5rem 0.7rem;
+  font-family: 'Montserrat';
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+.modal-lessons .lessons-container .module .lessons-div .lesson:hover {
+  background: rgba(255,255,255,0.8);
+  border: 1px solid rgba(193,255,171,0.2);
+  box-shadow: rgba(0,0,0,0.08) 0px 1px 3px 0px, rgba(0,0,0,0.04) 0px 1px 2px 0px;
+}
+.modal-lessons .lessons-container .module .lessons-div .lesson .lessonViewMark {
+  display: flex;
+  align-items: center;
+}
+.modal-lessons .lessons-container .module .lessons-div .lesson .lessonViewMark svg {
+  margin-right: 8px;
+}
+.modal-lessons .lessons-container .module .lessons-div .lesson .lessonViewMark svg .mark-green {
+  fill: #13d313;
+}
+.modal-lessons .lessons-container .module .lessons-div .lesson span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

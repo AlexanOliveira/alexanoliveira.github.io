@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Montserrat:wght@300;400;600;800&family=Open+Sans:wght@400;800&display=swap');
+
+@font-face
+   font-family 'TCCC-UnityText Regular'
+   src url('/assets/fonts/TCCC-UnityText Regular.ttf')
+
+.light-theme
+   --background linear-gradient(180deg, hsl(204, 12%, 95%) 5%, hsl(210, 11%, 94%) 25%, hsl(210, 12%, 93.5%) 50%, hsl(207, 12%, 93%) 75%, hsl(210, 12%, 92.5%) 100%)
+   --background-container linear-gradient(180deg, hsl(210, 12%, 99%) 5%, hsl(210, 12%, 98.5%) 25%, hsl(211, 12%, 98%) 50%, hsl(210, 12%, 97.5%) 75%, hsl(209, 12%, 98%) 100%)
+   --background-footer linear-gradient(90deg, #5d6a77 5%, #586470 25%, #535e6a 50%, #4f5a65 75%, #4c5761 100%)
+   --background-nav linear-gradient(90deg, hsl(210, 12%, 99%) 5%, hsl(210, 12%, 98.5%) 25%, hsl(211, 12%, 98%) 50%, hsl(210, 12%, 97.5%) 75%, hsl(209, 12%, 98%) 100%)
+   --background-opacity rgba(248, 248, 248, 0.58)
+   --text-color #3d4247
+   --h-color #12181b
+   --nav-shadow 4px 0 10px -3px #c1c1c1
+   --card-shadow 0 4px 8px rgba(0, 30, 84, 0.12)
+   --toc-shadow rgba(0, 0, 0, 0.2) 0px 10px 20px 0px
+   --nav-bg #fff
+   --tag-bg #b2becd
+   --code-bg #fff
+   --card-bg #fff
+   --overlay-bg hsla(0, 0%, 100%, 0.9)
+   --h-border 2px dashed #dbe1e8
+   --card-border 1px solid #dbe1e8
+   --icon-color #90969D
+
+bg = var(--background)
+bg-cont = var(--background-container)
+bg-footer = var(--background-footer)
+bg-nav = var(--background-nav)
+font-header = 'Gruppo'
+font-text = 'Montserrat'
+font-sub-txt = 'TCCC-UnityText Regular'
+font-video-title = 'Open Sans'
+h1-txt-color = var(--text-color)
+icon-color = var(--icon-color)
+
+*
+   margin 0
+   padding 0
+   box-sizing border-box
+   -webkit-transition: all .3s ease-in-out
+   -moz-transition: all .3s ease-in-out
+   -o-transition: all .3s ease-in-out
+   transition: all .3s ease-in-out
+   scrollbar-color #73d986b6#56deea14
+   scrollbar-width: thin
+   &::-webkit-scrollbar
+      width 7px
+      height 7px
+      background #56deea14
+      &:hover
+         cursor default
+   &::-webkit-scrollbar-thumb
+      background #73d986b6
+   &::-webkit-scrollbar-corner
+      background #56deea14
+
+
+html
+   scroll-behavior smooth
+a, .btn-login
+   text-decoration none
+   cursor pointer
+
+.icon
+   fill icon-color
+   cursor pointer
+   &:hover
+      fill #0097FA
+
+p
+   margin-bottom 10px
+
+//    Home Page   //
+body
+   overflow-x hidden
+   background background-image: url(https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?cs=srgb&dl=pexels-johannes-plenio-1103970.jpg&fm=jpg); //bg (change)
+   background-repeat round // (change)
+   user-select none
+   nav
+      width 100%
+      min-width 750px
+      position fixed
+      top 0
+      background #f1f1f1f2 // bg-nav (change)
+      box-shadow 0px 0 5px -3px #46454574
+      display flex
+      flex-direction row
+      z-index 999
+      border-bottom 1px solid bg-nav
+      height 4em
+      .topnav-logo
+         min-width 15vw
+         #logo
+            padding-top 10px
+
+      .topnav-pages
+         margin 0 auto
+      .topnav-login
+         min-width 15vw
+         .btn-login
+            flex-direction: row
+            color #0097FA
+            border 2px solid #0097FA
+            border-radius 50px
+            height 40px
+            width 120px
+         .btn-login:hover
+            color white
+            background #0097FA
+         svg
+            width 0.85em
+            margin-right .50em
+
+      a, .btn-login
+         margin 0 1em
+         color h1-txt-color
+         position relative
+
+      a:not(#logo):hover
+         color black
+         padding-top 3px
+      a:not(#logo):hover::after
+         transform: scale(1);
+      a:not(#logo):after
+         position: absolute
+         bottom: -5px
+         left 12%
+         width 80%
+         height 2px
+         content ""
+         background-color #0097FA
+         transition all .25s ease-in-out
+         transform scale(0)
+
+   .body-container
+      max-width 1400px
+      min-width 750px
+      margin 78px auto 0
+      padding 3em
+      font-size 1rem
+      text-align justify
+      flex-direction column
+      .work-modal
+         text-align center
+         position fixed
+         top -150vw
+         width 100%
+         height 100%
+         background: rgba(0, 0, 0, 0.25)
+         z-index 1000
+         transition top 0ms ease-in-out 0.2s
+         user-select none
+         .work-form
+            border-radius 15px
+            display flex
+            flex-direction column
+            overflow hidden
+            background #ffffff
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%, -50%) scale(1.15)
+            opacity 0
+            .coming-soon
+               height 100px
+               margin-bottom 1rem
+               h1
+                  font-size: 1.8rem
+                  color #fff
+                  background #003140
+                  padding .5rem 2rem
+                  border-radius 15px
+            img
+               width 500px
+               height 56.25%
+
+      .work-modal.active
+         top 0
+         transition top 0s ease-in-out 0s
+         .work-form
+            transform translate(-50%, -50%) scale(1)
+            opacity 1
+
+      .profile
+         .picture-area
+            width 100%
+            height auto
+            min-width 150px
+            overflow hidden
+            img
+               border-radius: 50%
+               width  100%
+         .description
+            padding 2rem 0 0 2rem
+            svg
+               fill rgb(40, 40, 40)
+               width 100%
+            h3
+               margin-top 30px
+               margin-bottom 20px
+            .knowledges
+               display flex
+               .lang
+                  margin 15px 120px 15px 0
+               li
+                  list-style none
+                  &:before
+                     content: "×"
+                     margin-left: -1.5rem
+                     color: #ef3c98
+                     font-size: 2rem
+                     line-height: 0
+                     position: absolute
+                     margin-top: 10.9px
+
+      .contact
+         width 50%
+         height 50px
+         margin 0 auto 20px
+         background #f9fafbb3 //#f9fafb (change)
+         display flex
+         padding 0rem 2rem
+         border-radius 7px
+         div
+            flex 1
+            display flex
+            align-items center
+            justify-content center
+            a
+               margin auto 0
+               all unset
+               font-weight 600
+               cursor pointer
+               transition all .2s ease-out
+               display flex
+               align-items center
+               svg
+                  width 30px
+                  margin-right 10px
+                  fill #3d3d45
+            .wpp
+               &:hover, &:hover svg
+                  color #25d366
+                  fill #25d366
+            .github
+               &:hover, &:hover svg
+                  color #8c8c8c
+                  fill #8c8c8c
+            .facebook
+               &:hover, &:hover svg
+                  color #0097FA
+                  fill #0096fa
+
+      .private-class
+         flex-direction column
+         .title
+            width 100%
+            margin-bottom 2rem
+         ol
+            margin 8px 38px 16px
+            li
+               list-style none
+               counter-increment li
+               line-height: 22px
+               &:before
+                  content: counter(li)
+                  margin-left: -1rem
+                  color: #ef3c98
+                  font-size: 1rem
+                  font-weight: 600
+                  line-height: 0px
+                  position: absolute
+                  margin-top: 10.9px
+
+         .topics
+            padding 1rem
+            margin-top 10px
+            overflow-x scroll
+            justify-content unset
+            border-radius 6px
+            background #ebedefd9 //#ebedef5c (change)
+            .topic-div
+               white-space nowrap
+               div
+                  margin-bottom 5px
+                  color #2ce3b4
+                  font-size 1.3rem
+                  font-weight 600
+               ul
+                  margin-left 1rem
+                  margin-right 1.5rem
+                  li
+                     list-style none
+                     line-height 22px
+                     &:before
+                        content "◈"
+                        margin-left -1rem
+                        margin-right .6rem
+                        color #2ce3b4
+                        font-size 0.8rem
+                        line-height 0
+                        margin-top 10.9px
+                        font-weight bolder
+
+      .hire-me
+         flex-direction column
+         clear both
+         .title
+            width 100%
+            margin-bottom 2rem
+      .services-container
+         .title
+            padding 3.5rem 0 2rem
+            font-size 2rem
+         .services-div
+            display flex
+            flex-wrap wrap
+            .service
+               height 250px
+               padding 1.5rem
+               margin 1rem
+               border-radius 8px
+               flex 1 0 21%
+               display flex
+               flex-direction column
+               justify-content center
+               background #efefefb3 //#efefef (change)
+               span
+                  text-align center
+                  margin-bottom 1rem
+                  font-weight bold
+                  font-size 1.3rem
+
+
+
+   footer
+      width 100%
+      margin-top 2rem
+      color white
+      opacity 0.8 //(change)
+      .svg-rgb
+         margin 0 0 -10px
+      .footer-div
+         width 100%
+         background bg-footer
+         .footer-container
+            margin 0 auto
+            padding 4em
+            max-width 1400px
+            height 200px
+            display: flex
+            border-bottom 1px solid transparent
+            border-image linear-gradient(90deg, #929eaa 5%, #8a96a3 25%, #84919f 50%, #7e8c9a 75%, #7c8a98 100%)
+            border-image-slice 1
+            .sec1
+               flex: 1
+               // c1()
+            .sec2
+               flex: 1
+               // c2()
+            .sec3
+               flex: 1
+               // c3()
+      .text-footer
+         text-align center
+         padding 15px
+         font-size 12px
+
+
+
+//    General CSS   //
+
+.title-text
+   font-family font-header
+   font-weight 600
+   font-size 1.2rem
+
+.subt-text
+   font-family font-sub-txt
+
+.normal-text
+   font-family font-text
+   font-weight 400
+   font-size 1rem
+   color #3d3d45
+
+.flex-center
+   display flex
+   align-items center
+   justify-content center
+
+input::placeholder
+	color #888
+
+input:not([type=button])
+   height 45px
+   padding 0 1.2em
+   background rgba(243, 247, 246, 0.54)
+   border-radius 3px
+   border 1px solid hsl(120, 33%, 96%)
+
+input:not([type=button]):focus
+   outline none
+   border 1px solid #48e3cf;
+
+input[type=button]
+   display inline-block
+   margin 2em auto
+   height 35px
+   padding 0 1.6em
+   background #40E0D4
+   color white
+   border-radius 50px
+   border none
+   letter-spacing 0.085em
+   cursor pointer
+
+.container
+   width 100%
+   padding 2rem
+   margin-bottom 20px
+   border-radius 7px
+   display flex
+   background: #f9fafbb3 //#f9fafb (change)

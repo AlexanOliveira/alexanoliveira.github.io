@@ -1,0 +1,448 @@
+bg = var(--background)
+bg-cont = var(--background-container)
+bg-footer = var(--background-footer)
+bg-nav = var(--background-nav)
+font-header = 'Gruppo'
+font-text = 'Montserrat'
+font-sub-txt = 'TCCC-UnityText Regular'
+font-video-title = 'Open Sans'
+h1-txt-color = var(--text-color)
+
+body nav
+   position unset
+   .topnav-user
+      min-width 15vw
+      .btn-user
+         border none
+         #notification
+            height 25px
+            margin-right: 25px
+         .user-pict
+            width auto
+            height 40px
+            overflow hidden
+            border 2px solid #d6d6d673
+            border-radius 50%
+            img
+               width auto
+               height 100%
+
+.big-container
+   display flex
+
+.body-container.expand
+   padding .5rem
+
+.body-container
+   flex 1 1 0%
+   margin 0 auto !important
+   overflow hidden
+   min-width 720px
+   text-align unset !important
+   .section-video
+      background bg-cont
+      border-radius 10px
+      display flex
+      flex-direction: column
+      padding 1rem
+      position relative
+      .video-header
+         display flex
+         margin .2rem .2rem .6rem
+         .video-title
+            flex 1 1 0%
+            font-size 1.5rem
+            font-family font-text
+            font-weight bolder
+            white-space nowrap
+            overflow hidden
+            text-overflow ellipsis
+         .options-div
+            display flex
+            justify-content: right
+            .expand-area, .show-module
+               margin 0 6px
+               color #0097FA
+               border 2px solid #0097FA
+               border-radius 50px
+               height 25px
+               padding 0 1rem
+               font-size 0.7em
+               cursor pointer
+            .expand-area:hover, .show-module:hover
+               color white !important
+               background #0097FA
+            .show-module.active
+               color #0097FA
+               border-color #0097FA
+               pointer-events auto
+
+            .show-module
+               color transparent
+               border 2px solid transparent
+               pointer-events none
+
+
+      .video-area
+         margin auto
+         width 100%
+         .responsivity
+            position relative
+            padding 0px 0px 56.25%
+            .play-video
+               position absolute
+               height 100%
+               border-radius 10px
+
+      .video-info
+         display: flex
+         padding-top 1rem
+         justify-content center
+         align-items center
+         div
+            font-size: .9rem
+            margin 0 25px
+            height 1.3rem
+            cursor pointer
+            &:hover
+               color #0097fa
+            span
+               margin 0 8px
+
+      .video-details.expand
+         height 270px
+      .video-details
+         height 0px
+         overflow: hidden
+         .video-file
+            display flex
+            flex-direction: column
+            padding 1rem
+            .header
+               display flex
+               font-size 0.8rem
+               font-weight 500
+               margin-top 10px
+               padding 0 .7rem
+               .name
+                  width 75%
+               .size
+                  width 15%
+                  text-align center
+               .download
+                  width 10%
+                  text-align center
+            .file
+               margin .3rem 0
+               padding .7rem
+               background white
+               border 1px solid hsl(120, 33%, 96%)
+               border-radius 4px
+               font-size 14px
+               font-weight lighter
+               color #48484f
+               border-collapse: collapse;
+               display flex
+               .name
+                  width 75%
+                  display flex
+                  align-items: center
+               .size
+                  width 15%
+                  display flex
+                  align-items: center
+                  justify-content center
+               .download
+                  width 10%
+                  display flex
+                  justify-content center
+
+
+         .video-obs
+            display flex
+            flex-direction: column
+            padding 1rem
+            margin-bottom 1rem
+            .observations
+               margin .5rem 0
+               padding .7rem
+               background white
+               border 1px solid hsl(120, 33%, 96%)
+               border-radius 4px
+               font-size 14px
+               font-weight lighter
+               color #48484f
+
+         .ver-mais
+            position absolute
+            bottom 1rem
+   .notepad
+      padding 1rem 2rem
+      #area-text::placeholder
+         color: rgb(161, 162, 164)
+      #area-text
+         width 100%
+         margin .5rem 0
+         padding .7rem
+         max-height: 150px
+         resize none
+         border 1px solid hsl(120, 33%, 96%)
+         border-radius 5px
+         outline none
+         font-size 14px
+         color #48484f
+         user-select text
+         &:focus
+            outline none
+            border 1px solid #48e3cf
+
+   .section-questions
+      display flex
+      flex-direction column
+      padding 1.5rem
+
+      .make-question
+         margin .5rem 0
+         .edit-html-question
+            display flex
+            margin-left 1rem
+            margin-top 1rem
+            div // insert-img, insert-code
+               padding-right .8rem
+
+         .input-question-container
+            border-radius 5px
+            overflow hidden
+            margin: 0.5rem 0
+            outline none
+            background white
+            white-space nowrap
+            .input-question
+               border 1px solid #f1f8f1
+               border-radius 5px
+               min-height 150px
+               max-height 85vh
+               padding: 0.7rem
+               overflow-x scroll
+               font-size 14px
+               font-weight lighter
+               color #48484f
+               user-select text
+               outline none
+               tab-size: 4
+               &:focus
+                  border 1px solid #48e3cf
+               &:empty + button
+                  pointer-events: none
+                  background lightgrey
+
+               &:empty:not(:focus):before
+                  content:attr(placeholder)
+                  color: rgb(161, 162, 164)
+               img
+                  max-width calc(100% - 2rem)
+                  margin 1rem
+                  box-shadow 0 1px 3px rgba(0,0,0,.12), 0 1px 1px 1px rgba(0,0,0,.16)
+                  border .7px solid rgb(215, 215, 215)
+                  border-radius 2px
+
+
+               .code-container
+                  user-select text
+                  .code-div
+                     background #151F2C;
+                     color lightgrey
+                     margin .5rem .5rem 1rem
+                     border-radius 12px
+                     overflow hidden
+                     position relative
+                     .code-bar
+                        height 25px
+                        background #333435
+                        border-radius 12px 12px 0 0
+                        display flex
+                        align-items center
+                        user-select none
+                        cursor default
+                        .btn-close, .btn-empty
+                           height 13px
+                           width 13px
+                           margin-left 6px
+                           border-radius 50%
+                           background #555857
+                        .btn-close
+                           margin-left 8px !important
+                           background #FE5E56
+                           cursor pointer
+                           &:hover
+                              background hsl(3, 97%, 53%)
+
+                     &:hover .copy-btn
+                        opacity 1
+                     .copy-btn
+                        background hsla(200, 2%, 30%, 0.45)
+                        color rgba(255, 255, 255, 0.30)
+                        font-family font-sub-txt
+                        font-size 10px
+                        font-weight bolder
+                        position absolute
+                        right 0
+                        padding 6px 7px 5px
+                        margin 1rem
+                        border none
+                        outline none
+                        border-radius 5px
+                        cursor pointer
+                        opacity 0
+                        --opct 0
+                        --dsp none
+                        &:hover
+                           background hsl(200, 2%, 30%)
+                           color white
+                        &::before
+                           content 'Copiado'
+                           background #4b4d4e
+                           color #fff
+                           transition background-color .2s ease-in-out, color .2s ease-in-out
+                           display var(--dsp)
+                           opacity var(--opct)
+                           padding 10.3px 8px
+                           border-radius 5px
+                           position absolute
+                           top 0
+                           left -70px
+
+                     pre
+                        min-height 120px
+                        code
+                           padding 1.2rem 1.5rem
+                           user-select text
+                           overflow-x scroll
+                           min-height 150px
+                           max-height 60vh;
+                           max-width: 1400px
+                           display block
+                           outline none
+                           &::selection
+                              color: #FDEDF5
+                              background: #7B4C67
+                           *::selection
+                              color: #FDEDF5
+                              background: #7B4C67
+                           .key-word
+                              color #EE78B9
+                           .normal-string
+                              color #7AD7F0
+                           .comment
+                              color #36A132
+
+         .btn-comment
+            color white
+            font-family font-sub-txt
+            font-size 11px
+            letter-spacing .8px
+            padding 10px 16px
+            background #0097FA
+            border-radius 2px
+            border none
+            cursor pointer
+            transition all .1s ease-out
+            margin-top 10px
+            float right
+
+            &:active
+               background #065FD4
+
+
+
+   .ver-mais
+      font-weight 500
+      font-size 13px
+      color #0097FA
+      margin-top -18px
+      width: 80px;
+      cursor pointer
+
+
+.modal-lessons.expand
+   top: 0;
+   position absolute
+   width 100vw
+   background rgba(0,0,0,0.25)
+
+.modal-lessons
+   user-select none
+   height 115vh
+   .lessons-container.modal
+      position absolute
+      background linear-gradient(180deg, #f1f3f4cc 5%, #eef0f1cc 25%, #eceef0cc 50%, #ebedefcc 75%, #eaeceecc 100%)
+
+   .lessons-container.hide
+      // width 0
+      max-width 0
+      border-color transparent
+   .lessons-container
+      right 0
+      top 78px
+      border-bottom-left-radius 10px
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 1px 1px rgba(0,0,0,0.1);
+      background: bg-cont
+      height 115vh
+      max-width 375px
+      overflow-y scroll
+      scrollbar-width none
+      &::-webkit-scrollbar
+         width 0px
+         height 0px
+
+      .module.expand .lessons-div
+         max-height auto
+      .module
+         border-bottom 2px dashed #11D6A3
+         padding .5rem 0
+         margin 0 1.5rem
+         font-family font-sub-txt
+         font-size .9rem
+
+         .module-div
+            background rgba(115,217,134,0.7)
+            text-overflow ellipsis
+            padding 1.5rem
+            border-radius 4px
+            cursor pointer
+            white-space nowrap
+            overflow hidden
+            &:hover
+               background rgba(115,217,134, 1)
+         .lessons-div
+            overflow hidden
+            max-width 320px
+            max-height 0px
+            margin-top 15px
+            .lesson
+               margin .2rem .8rem 0
+               padding .5rem .7rem
+               font-family font-text
+               font-size 13px
+               font-weight: 500
+               display flex
+               cursor pointer
+               border-radius 4px
+               border 1px solid transparent
+               &:hover
+                  background #fffc
+                  border 1px solid #c1ffab33
+                  box-shadow rgba(0, 0, 0, 0.08) 0px 1px 3px 0px, rgba(0, 0, 0, 0.04) 0px 1px 2px 0px
+
+               .lessonViewMark
+                  display flex
+                  align-items center
+                  svg
+                     margin-right 8px
+                     .mark-green
+                        fill #13d313
+               span
+                  white-space nowrap
+                  overflow hidden
+                  text-overflow ellipsis
+
