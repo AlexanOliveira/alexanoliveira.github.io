@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkalexcell_vue"]=self["webpackChunkalexcell_vue"]||[]).push([[443],{68:function(e,n,u){u.r(n),u.d(n,{default:function(){return v}});var a=u(252);const l={class:"about"},t=(0,a._)("h1",null,"This is an about page",-1),c=[t];function r(e,n,u,t,r,s){return(0,a.wg)(),(0,a.iD)("div",l,c)}var s=u(863),o={components:{ModalWork:s.Z}},i=u(744);const f=(0,i.Z)(o,[["render",r]]);var v=f}}]);
+//# sourceMappingURL=about.4e5b5bb2.js.map
